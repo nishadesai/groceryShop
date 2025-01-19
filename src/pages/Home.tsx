@@ -83,7 +83,7 @@ export const Home: React.FC = () => {
                   <p className="text-gray-600 mb-4">{product.description}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-lg font-bold text-orange-600">
-                      ${product.price.toFixed(2)}
+                    €{product.price.toFixed(2)}
                     </span>
                     <Link
                       to="/products"

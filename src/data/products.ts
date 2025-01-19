@@ -1,3 +1,5 @@
+import image1 from '../images/yellowDal.jpg';
+
 export const products = [
   {
     id: 1,
@@ -13,7 +15,7 @@ export const products = [
     description: "Split yellow lentils",
     price: 4.49,
     category: "Lentils",
-    image: "https://images.unsplash.com/photo-1585996950364-1f0b83d1b2b7?w=800&q=80"
+    image: image1
   },
   {
     id: 3,
