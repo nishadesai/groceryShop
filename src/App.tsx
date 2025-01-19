@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { BasketProvider } from './context/BasketContext';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -10,8 +10,18 @@ import { Basket } from './pages/Basket';
 import { Contact } from './pages/Contact';
 
 function App() {
+  const ScrollToTop = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+      window.scrollTo(0, 0); // Scroll to the top of the page
+    }, [pathname]);
+
+    return null; // This component does not render anything
+  };
   return (
-    <Router>
+    <Router basename="/groceryShop"> {/* Add basename for GitHub Pages */}
+      <ScrollToTop />
       <BasketProvider>
         <div className="min-h-screen bg-gray-50 flex flex-col">
           <Navbar />
